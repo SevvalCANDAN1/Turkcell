@@ -1,0 +1,199 @@
+/* Portal.css - FİNAL ELİTE VERSİYON */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+
+/* 1. TÜM EKRANI KAPLAYAN ANA YAPI */
+.portal-elite-wrapper {
+  width: 100vw !important;
+  min-height: 100vh !important;
+  /* Koyu lacivert: Bütün ekran tek renk */
+  background-color: #001a3d !important; 
+  font-family: 'Inter', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 2. ÜST BAR: YAZIYI SOLA, BUTONU SAĞA YASLAR */
+.portal-header-bar {
+  max-width: 1200px;
+  margin: 0 auto 20px; /* Alttaki 60px olan boşluğu 20px'e indirdik */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0; /* İç boşluğu daralttık */
+}
+
+.hero-section {
+  text-align: center;
+  margin-top: 0 !important; /* Üstteki tüm boşluğu sıfırladık */
+  margin-bottom: 50px; /* Kartlarla arasındaki mesafeyi koruduk */
+}
+
+.hero-section h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 900;
+  margin-top: 0; /* Başlığın kendi iç boşluğunu sildik */
+  margin-bottom: 10px;
+  letter-spacing: -2px;
+}
+
+.hero-section p {
+  color: #94a3b8;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+/* TURKCELL METİN LOGO (En Sola Yaslı) */
+.turkcell-brand-box {
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+}
+
+.turkcell-text-logo {
+  color: #ffc600; /* Turkcell Sarısı */
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+/* GÜVENLİ ÇIKIŞ BUTONU (En Sağa Yaslı) */
+.elite-logout {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.elite-logout:hover {
+  background: #ffffff;
+  color: #001a3d;
+  transform: translateY(-2px);
+}
+
+/* 3. İÇERİK ALANI */
+.portal-main-content {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.hero-section h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 900;
+  margin-bottom: 15px;
+  letter-spacing: -2px;
+}
+
+.hero-section p {
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+/* 4. KART SİSTEMİ */
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  width: 100%;
+}
+
+.elite-service-card {
+  background: #ffffff;
+  border-radius: 35px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 420px;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.elite-service-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 50px 100px rgba(0,0,0,0.6);
+}
+
+.card-top-accent {
+  height: 100px;
+  width: 100%;
+}
+
+/* Servis Renkleri */
+.superonline-card .card-top-accent { background: #005baa; }
+.tvplus-card .card-top-accent { background: #e30613; }
+.paycell-card .card-top-accent { background: #ffc600; }
+
+.card-inner {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 100px);
+}
+
+.service-logo-area {
+  background: white;
+  width: 95px;
+  height: 95px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -90px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  margin-bottom: 25px;
+  padding: 15px;
+}
+
+.brand-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.service-text-area h3 {
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.service-text-area p {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.card-footer-btn {
+  margin-top: auto;
+  font-weight: 800;
+  color: #005baa;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* Mobil Ayarlar */
+@media (max-width: 600px) {
+  .portal-header-bar {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}

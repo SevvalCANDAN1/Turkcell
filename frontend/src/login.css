@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  /* Turkcell Geçişli Arka Plan */
+  background: linear-gradient(135deg, #001e4a 0%, #005baa 50%, #ffc600 130%);
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  /* Genişliği 450px yaparak daha ferah bir alan sağladık */
+  max-width: 450px; 
+  padding: 50px; /* İç boşluğu artırdık */
+  border-radius: 32px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.logo-wrapper {
+  margin-bottom: 30px;
+}
+
+.login-box h2 {
+  color: #002855;
+  font-size: 28px;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.login-box p {
+  color: #64748b;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 18px 22px;
+  border-radius: 16px;
+  border: 2px solid #f1f5f9;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #005baa;
+  background: white;
+  box-shadow: 0 0 0 5px rgba(0, 91, 170, 0.08);
+}
+
+.password-group {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: #64748b;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 18px;
+  background: #005baa;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 15px;
+}
+
+.login-btn:hover {
+  background: #004586;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 91, 170, 0.3);
+}
+
+.footer-links {
+  margin-top: 35px;
+  font-size: 15px;
+  color: #64748b;
+}
+
+.footer-links a {
+  color: #005baa;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.forgot-pass {
+  margin-top: 15px;
+}
+
+.forgot-pass a {
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 14px;
+}
+

@@ -1,0 +1,153 @@
+/* Superonline.css - TAM EKRAN SABİT LACİVERT (SIFIR GEÇİŞ) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+
+/* 1. TÜM EKRANI BOYAMA VE RESET */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  /* Yanlardaki geçişli renkleri tamamen yok eden sabit renk */
+  background-color: #001a3d !important; 
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.so-wrapper {
+  background-color:#001a3d !important; /* Diğer her şeyi ezer */
+  position: fixed; /* Ekranın üzerine çivi gibi çakar */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999; /* En üstte görünmesini sağlar */
+  overflow-y: auto;
+}
+
+/* 2. ÜST NAVİGASYON (Kenarlara Tam Yaslı) */
+.so-header-nav {
+  width: 100%;
+  padding: 25px 40px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.so-logo-text {
+  font-size: 26px;
+  font-weight: 900;
+  color: #00a1e0;
+  letter-spacing: 2px;
+}
+
+.so-back-portal-btn {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.so-back-portal-btn:hover {
+  background: white;
+  color: #001a3d;
+}
+
+/* 3. ANA İÇERİK (Ekrana Tam Yayılım) */
+.so-main-content {
+  width: 100%;
+  max-width: 1400px; /* İçeriğin çok dağılmaması için ideal genişlik */
+  margin: 0 auto;
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Dikeyde tam orta */
+}
+
+.so-welcome {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.so-welcome h1 { 
+  font-size: clamp(32px, 5vw, 48px); 
+  font-weight: 900; 
+  margin: 0; 
+}
+
+.so-welcome p { 
+  color: #94a3b8; 
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* 4. DÖRTLÜ KART YAPISI (Simetrik Ortalı) */
+.so-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 25px;
+  width: 100%;
+}
+
+.so-stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 40px 20px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.so-stat-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.so-stat-icon {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.so-stat-info label {
+  display: block;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.so-stat-value {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.so-unit {
+  font-size: 14px;
+  color: #00a1e0;
+  margin-left: 5px;
+}
+
+/* 5. RESPONSIVE (Mobil Ayarı) */
+@media (max-width: 1100px) {
+  .so-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .so-stats-grid { grid-template-columns: 1fr; }
+  .so-header-nav { padding: 20px; }
+}
